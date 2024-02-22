@@ -16,13 +16,10 @@ public class DogPesquisarTodos {
 		
 		DadosCao dl = new DadosCao();
 		DadosCaoDAO d = new DadosCaoDAO();
-		
 		Pai p = new Pai();
 		PaiDAO Pdao = new PaiDAO();
-		
 		Mae m = new Mae();
 		MaeDAO Mdao = new MaeDAO();
-		
 		
 		List<DadosCao> caes = d.pesquisarTodos();
 		List<Pai> pais = Pdao.pesquisarTodos();
@@ -61,7 +58,6 @@ public class DogPesquisarTodos {
 			System.out.print(caes.get(x).getSexo());
 			System.out.println(", ");
 			
-			
 			System.out.print("Nome do Pai: ");
 			System.out.print(pais.get(x).getNomePai());
 			System.out.print(", ");
@@ -75,17 +71,8 @@ public class DogPesquisarTodos {
 			System.out.print("Registro book");
 			System.out.println(maes.get(x).getRegistrostudbook());
 			
-			
-			
-			
-			
 			System.out.println("+-----------------------------------+");
-		//	System.out.print("Data: ");
-		//	System.out.print(caes.get(x).getData());
-		//	System.out.println(", ");
-			
 		}
 
-		
 	}
 }

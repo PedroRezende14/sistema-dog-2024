@@ -25,7 +25,6 @@ public class DogProcurarId {
 		
 		int x ;	
 
-		
 		System.out.println("+-----------------------------------+");
 		System.out.println("|   PROCURAR POR ID DO CACHORRO     |");
 		System.out.println("+-----------------------------------+");

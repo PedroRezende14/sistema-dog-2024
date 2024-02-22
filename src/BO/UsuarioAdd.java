@@ -34,9 +34,7 @@ public class UsuarioAdd {
 		System.out.println("+-----------------------------------+");
 		System.out.println("|         USUARIO REGISTRADO        |");
 		System.out.println("------------------------------------+");
-		
 		ld.inserir(l);
-		
 	}
 
 }

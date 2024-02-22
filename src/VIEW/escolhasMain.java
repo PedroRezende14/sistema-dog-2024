@@ -37,8 +37,7 @@ public class escolhasMain {
 			System.out.println("7 - Ver todos os Usuarios           |");
 			System.out.println("8 - Sair                            |");
 			System.out.println("------------------------------------+");
-			
-			
+
 			opc = entrada.nextInt();
 			
 			lt.limparTela();
@@ -74,7 +73,6 @@ public class escolhasMain {
 				UsuarioLista ul = new UsuarioLista();
 				ul.UsuarioList();
 			}
-			
 		
 			if(opc >7 || opc < 1) {
 				System.out.println("Opção invalida"); 

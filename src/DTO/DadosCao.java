@@ -21,32 +21,6 @@ import java.nio.file.*;
 	private String criador;
 	private String sexo;
 	
-	/*public DadosCao( String nomeCao, String raca,String RegistroStudBook, String cor, String origemRaca, String criador, String sexo){
-		this.nomeCao = nomeCao;
-		this.raca = raca;
-		this.RegistroStudBook = RegistroStudBook;
-		this.cor=cor;
-		this.origemRaca=origemRaca;
-		this.criador=criador;
-		this.criador=criador;
-		this.sexo=sexo;
-	}
-	
-	public void fotoDog(String url) {
-		
-		Path fotoDog = Paths.get(url);
-		
-		if(Files.exists(fotoDog)) {
-			System.out.println("foto existe");
-		}
-		else {
-			System.out.println("foto não existe");
-		}
-	}
-	*/
-	
-	
-	
 	public int getnMicroChip() {
 		return nMicroChip;
 	}
@@ -105,7 +79,7 @@ import java.nio.file.*;
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
-
+	
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();

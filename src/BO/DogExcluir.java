@@ -41,9 +41,7 @@ public class DogExcluir {
 		d.Excluir(dl);
 		Pdao.Excluir(p);
 		Mdao.Excluir(m);
-		
-		
-		
+
 		System.out.println("+-----------------------------------+");
 		System.out.println("|  CADASTRO REMOVIDO COM SUCESSO    |");
 		System.out.println("+-----------------------------------+");

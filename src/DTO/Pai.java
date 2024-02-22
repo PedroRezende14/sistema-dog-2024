@@ -26,8 +26,4 @@ public class Pai {
 	public void setPk_pai(int pk_pai) {
 		this.pk_pai = pk_pai;
 	}
-
-	
-	
-
 }

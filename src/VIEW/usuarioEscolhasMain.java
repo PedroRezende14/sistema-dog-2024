@@ -7,7 +7,6 @@ import BO.DogExcluir;
 import BO.DogInserir;
 import BO.DogPesquisarTodos;
 import BO.DogProcurarId;
-import BO.LimparTela;
 import BO.UsuarioExcluir;
 import BO.UsuarioLista;
 import DTO.DadosCao;

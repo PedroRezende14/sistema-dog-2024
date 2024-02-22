@@ -67,7 +67,6 @@ public class DogAlterar {
 		p.setPk_pai(x);
 		m.setPk_mae(x);
 		
-		
 		System.out.println("+-----------------------------------+");
 		System.out.println("|  ALTERAR INFORMAÇÕES DO PAI       |");
 		System.out.println("+-----------------------------------+");
@@ -80,7 +79,6 @@ public class DogAlterar {
 		resposta = entrada.next();
 		p.setRegistrostudbook(resposta);
 		
-		
 		System.out.println("+-----------------------------------+");
 		System.out.println("|  ALTERAR INFORMAÇÕES DO MAE       |");
 		System.out.println("+-----------------------------------+");
@@ -92,7 +90,6 @@ public class DogAlterar {
 		System.out.print("RegistroStudBook");
 		resposta = entrada.next();
 		m.setRegistrostudbook(resposta);
-		
 		
 		Pdao.alterar(p);
 		d.alterar(dl);

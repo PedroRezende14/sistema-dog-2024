@@ -29,10 +29,6 @@ public class UsuarioLista {
 				System.out.print(", Senha: ");
 				System.out.println(users.get(x).getSenha_usuario());
 				System.out.println("+-----------------------------------+");
-			
 			}
-			
-			
 	}
-
 }

@@ -12,9 +12,6 @@ public class UsuarioExcluir {
 		LoginDAO ld = new LoginDAO();
 		Scanner entrada = new Scanner(System.in);
 		
-		
-		
-		
 		System.out.println("+-----------------------------------+");
 		System.out.println("|         EXCLUIR USUARIO           |");
 		System.out.println("------------------------------------+");
@@ -26,7 +23,7 @@ public class UsuarioExcluir {
 		System.out.println("+-----------------------------------+");
 		System.out.println("|         USUARIO DELETADO          |");
 		System.out.println("------------------------------------+");
-		
+
 		ld.Excluir(l);
 		
 	}

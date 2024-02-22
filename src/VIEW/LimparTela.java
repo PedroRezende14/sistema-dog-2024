@@ -1,4 +1,4 @@
-package BO;
+package VIEW;
 
 public class LimparTela {
 

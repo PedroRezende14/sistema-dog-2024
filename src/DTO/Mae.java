@@ -29,6 +29,4 @@ public class Mae {
 		this.registrostudbook = registrostudbook;
 	}
 	
-	
-	
 }

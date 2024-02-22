@@ -1,7 +1,4 @@
 package DTO;
-import java.util.Arrays;
-import java.util.HashMap;
-
 public class Ninhada {
 
 	private int nNinhada;
@@ -22,13 +19,5 @@ public class Ninhada {
 		builder.append(nNinhada);
 		builder.append("]");
 		return builder.toString();
-	}
-	
-	
-	
-	
-	
-	
-	
-	
+	}	
 }

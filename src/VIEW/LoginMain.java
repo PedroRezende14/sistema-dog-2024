@@ -1,5 +1,4 @@
 package VIEW;
-
 import java.util.Scanner;
 
 import BO.*;
@@ -11,17 +10,12 @@ import DTO.*;
 import MYSQL.*;
 import Conexao.Conexao;
 
-	
-
 public class LoginMain {
 	LimparTela lt = new LimparTela();
 	Scanner entrada = new Scanner(System.in);
-	UsuarioAdd au  = new UsuarioAdd();
-			
+	UsuarioAdd au  = new UsuarioAdd();		
 	escolhasMain em = new escolhasMain();
-	
 
-	
 	public void inicio() {
 		int opc=0;
 		

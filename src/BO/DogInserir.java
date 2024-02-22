@@ -54,13 +54,9 @@ public class DogInserir {
 		resposta = entrada.next();	
 		dl.setCriador(resposta);
 		
-		
-		
-		
 		int valida = 1;
 		
 		if(valida == 1) {
-			
 			d.inserir(dl);
 			
 			System.out.println("+-----------------------------------+");
@@ -83,9 +79,7 @@ public class DogInserir {
 			System.out.println("|    PAI ADICIONADO COM SUCESSO     |");
 			System.out.println("+-----------------------------------+");
 			Pdao.inserir(p);
-			
-			
-			
+
 			System.out.println("+-----------------------------------+");
 			System.out.println("|      DADOS DO MAE DO CACHORRO       |");
 			System.out.println("------------------------------------+");
@@ -101,13 +95,8 @@ public class DogInserir {
 			System.out.println("+-----------------------------------+");
 			System.out.println("|    MAE ADICIONADO COM SUCESSO     |");
 			System.out.println("+-----------------------------------+");
-			Mdao.inserir(m);
-			
-			
-		}else {
-			
+			Mdao.inserir(m);	
 		}
-		
 		}
 	}
 

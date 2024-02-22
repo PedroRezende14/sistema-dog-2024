@@ -1,7 +1,6 @@
 package DTO;
 public class Login {
 	
-	
 	private int id_usuario;
 	private String nome_usuario;
 	private String senha_usuario;
@@ -30,6 +29,20 @@ public class Login {
 	public void setId_usuario(int id_usuario) {
 		this.id_usuario = id_usuario;
 	}
-
-	
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Login [id_usuario=");
+		builder.append(id_usuario);
+		builder.append(", nome_usuario=");
+		builder.append(nome_usuario);
+		builder.append(", senha_usuario=");
+		builder.append(senha_usuario);
+		builder.append(", email_usuario=");
+		builder.append(email_usuario);
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
+	}
 }

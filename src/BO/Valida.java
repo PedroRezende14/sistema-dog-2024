@@ -12,11 +12,16 @@ import VIEW.usuarioEscolhasMain;
 public class Valida {
 	
 	public void chek() {
+		
+
+		
+		
 		escolhasMain em = new escolhasMain();
 		Login l = new Login();
 		LoginDAO ld = new LoginDAO();
 		usuarioEscolhasMain uem = new usuarioEscolhasMain();
-		
+		em.Opc();
+		/*
 		Scanner entrada = new Scanner(System.in);
 		String r;
 		String x;
@@ -58,20 +63,7 @@ public class Valida {
 				System.out.println("------------------------------------+");
 			}
 		}
-	
-		
-		
-		
-	/*	receba=ld.Verifica(l);
-		if(receba==null) {
-			System.out.println("oi");
-			em.Opc();
-		}else {
-			em.Opc();
-			System.out.println("porra");
-		}
-		
-*/
+		*/
 		
 	}
 
