@@ -1,4 +1,4 @@
-package MYSQL;
+package DAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,7 +9,7 @@ import java.util.List;
 import Conexao.Conexao;
 import DTO.Login;
 import DTO.Mae;
-import VIEW.escolhasMain;
+import SQL.OpcAdimSQL;
 
 public class LoginDAO {
 	

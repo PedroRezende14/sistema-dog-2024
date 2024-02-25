@@ -2,12 +2,12 @@ package BO;
 
 import java.util.List;
 
+import DAO.DadosCaoDAO;
+import DAO.MaeDAO;
+import DAO.PaiDAO;
 import DTO.DadosCao;
 import DTO.Mae;
 import DTO.Pai;
-import MYSQL.DadosCaoDAO;
-import MYSQL.MaeDAO;
-import MYSQL.PaiDAO;
 
 public class DogPesquisarTodos {
 	

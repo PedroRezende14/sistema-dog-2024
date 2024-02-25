@@ -1,4 +1,4 @@
-package MYSQL;
+package DAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -84,8 +84,7 @@ public class PaiDAO {
 		                
 		                System.out.println("======================================");
 		                System.out.println("          Dados Do Pai");
-		                //int pk_pai = rs.getInt("pk_pai");
-		                //System.out.print("nmicrochip: "+ pk_pai);
+		       
 		                
 		                String nomepai = rs.getString("nomepai");
 		                System.out.print("nome: "+ nomepai);

@@ -3,8 +3,8 @@ import java.util.List;
 import java.util.Scanner;
 import java.sql.SQLException;
 import DTO.*;
-import MYSQL.*;
 import Conexao.Conexao;
+import DAO.*;
 
 
 public class UsuarioLista {

@@ -17,7 +17,6 @@ import java.nio.file.*;
 	private String RegistroStudBook;
 	private String cor;	
 	private String origemRaca;
-	private Date data = new Date();
 	private String criador;
 	private String sexo;
 	
@@ -58,15 +57,6 @@ import java.nio.file.*;
 		this.origemRaca = origemRaca;
 	}
 	
-	public Date getData() {
-		return data;
-	}
-
-	public void setData(Date data) {
-		this.data = data;
-	}
-
-	
 	public String getCriador() {
 		return criador;
 	}
@@ -95,8 +85,6 @@ import java.nio.file.*;
 		builder.append(cor);
 		builder.append("\n origemRaca=");
 		builder.append(origemRaca);
-		builder.append("\n data Emissao =");
-		builder.append(data);
 		builder.append("\n criador=");
 		builder.append(criador);
 		builder.append("\n sexo=");

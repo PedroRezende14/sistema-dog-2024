@@ -1,4 +1,4 @@
-package VIEW;
+package SQL;
 
 import java.util.Scanner;
 
@@ -9,13 +9,15 @@ import BO.DogPesquisarTodos;
 import BO.DogProcurarId;
 import BO.UsuarioExcluir;
 import BO.UsuarioLista;
+import DAO.DadosCaoDAO;
 import DTO.DadosCao;
-import MYSQL.DadosCaoDAO;
+import VIEW.LimparTela;
+import VIEW.PaineisVIEW;
 
-public class usuarioEscolhasMain {
+public class OpcUserSQL {
 	public void pla() {
 		LimparTela lt = new LimparTela();
-	
+		PaineisVIEW vp = new PaineisVIEW();
 		Scanner entrada = new Scanner(System.in);
 		DadosCao dl = new DadosCao();
 		DadosCaoDAO d = new DadosCaoDAO();
@@ -26,14 +28,10 @@ public class usuarioEscolhasMain {
 		
 		
 		while(opc != 3 ) {
-			System.out.println("------------------------------------+");
-			System.out.println("            Painel Usuario          |");
-			System.out.println("------------------------------------|");
-			System.out.println("1 - Cadastrar Novo Cachorro         |");
-			System.out.println("2 - Procurar Cadastro por ID        |");
-			System.out.println("3 - Sair                            |");
-			System.out.println("------------------------------------+");
+
 			
+			
+			vp.PainelUser();
 			
 			opc = entrada.nextInt();
 			

@@ -4,10 +4,10 @@ import java.util.Scanner;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import DTO.*;
-import MYSQL.*;
+import SQL.OpcAdimSQL;
+import SQL.OpcUserSQL;
 import Conexao.Conexao;
-import VIEW.escolhasMain;
-import VIEW.usuarioEscolhasMain;
+import DAO.*;
 
 public class Valida {
 	
@@ -16,10 +16,10 @@ public class Valida {
 
 		
 		
-		escolhasMain em = new escolhasMain();
+		OpcAdimSQL em = new OpcAdimSQL();
 		Login l = new Login();
 		LoginDAO ld = new LoginDAO();
-		usuarioEscolhasMain uem = new usuarioEscolhasMain();
+		OpcUserSQL uem = new OpcUserSQL();
 		em.Opc();
 		/*
 		Scanner entrada = new Scanner(System.in);
