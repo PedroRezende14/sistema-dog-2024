@@ -1,5 +1,13 @@
 package VIEW;
 
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+import DTO.DadosCao;
+import DTO.Mae;
+import DTO.Pai;
+
 public class PaineisVIEW {
 	
 	
@@ -38,5 +46,31 @@ public class PaineisVIEW {
 		System.out.println("3 - Sair                            |");
 		System.out.println("------------------------------------+");
 	}
+	
+	public void SpanDados() {
+		// JOptionPane.showMessageDialog( null, "Dados salvos com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+	}
+	
+	public void PainelJSON() {
+		System.out.println("------------------------------------+");
+		System.out.println("            Painel JSON             |");
+		System.out.println("------------------------------------|");
+		System.out.println("1 - Cadastrar Novo Cachorro         |");
+		System.out.println("2 -                                 |");
+		System.out.println("------------------------------------+");
+	}
+	
+	public void PainelXML() {
+		System.out.println("------------------------------------+");
+		System.out.println("            Painel XML              |");
+		System.out.println("------------------------------------|");
+		System.out.println("1 - Cadastrar Novo Cachorro         |");
+		System.out.println("2 - Lista Todos Cadastros           |");
+		System.out.println("3 - Excluir Cadastros               |");
+		System.out.println("------------------------------------+");
+		
+		
+	}
+	
 
 }

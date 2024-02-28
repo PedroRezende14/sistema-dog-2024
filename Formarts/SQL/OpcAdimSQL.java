@@ -1,6 +1,8 @@
 package SQL;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 import BO.*;
 
 import java.io.IOException;
@@ -34,12 +36,12 @@ public class OpcAdimSQL {
 			pv.PainelAdim();
 			opc = entrada.nextInt();
 
-			lt.limparTela();
 			
 			switch(opc) {
 				case 1:
 					DogInserir di = new DogInserir();
 					di.funcaoInserir();
+					
 					break;
 					
 				case 2:
@@ -72,7 +74,6 @@ public class OpcAdimSQL {
 					break;
 					
 				case 8:
-					lt.limparTela();
 					System.out.println("Saiu do sistema");
 					break;
 				default:
@@ -82,3 +83,8 @@ public class OpcAdimSQL {
 	}
 
 }
+
+
+
+
+

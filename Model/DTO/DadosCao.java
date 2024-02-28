@@ -20,6 +20,18 @@ import java.nio.file.*;
 	private String criador;
 	private String sexo;
 	
+	
+	public DadosCao(){
+		this.nMicroChip = nMicroChip;
+		this.nomeCao = nomeCao;
+		this.raca = raca;
+		this.RegistroStudBook = RegistroStudBook;
+		this.cor = cor;
+		this.origemRaca = origemRaca;
+		this.criador = criador;
+		this.sexo = sexo;
+	}
+	
 	public int getnMicroChip() {
 		return nMicroChip;
 	}
@@ -42,7 +54,7 @@ import java.nio.file.*;
 		return RegistroStudBook;
 	}
 	public void setRegistroStudBook(String registroStudBook) {
-		RegistroStudBook = registroStudBook;
+		this.RegistroStudBook = registroStudBook;
 	}
 	public String getCor() {
 		return cor;

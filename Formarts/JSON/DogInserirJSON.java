@@ -1,26 +1,24 @@
-package BO;
+package JSON;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Scanner;
+import org.json.JSONObject;
+import DAO.DadosCaoDAO;
+import DAO.MaeDAO;
+import DAO.PaiDAO;
+import DTO.DadosCao;
+import DTO.Mae;
+import DTO.Pai;
+import VIEW.PaineisVIEW;
 
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
-
-import java.sql.SQLException;
-import DTO.*;
-import Conexao.Conexao;
-import DAO.*;
-import VIEW.*;
-
-public class DogInserir extends JFrame {
-	
+public class DogInserirJSON {
 	public void funcaoInserir() {
-		
-		Scanner entrada = new Scanner(System.in);
+			
+		PaineisVIEW pv = new PaineisVIEW();
 		DadosCao dl = new DadosCao();
+
+		Scanner entrada = new Scanner(System.in);
 		Pai p = new Pai();
 		Mae m = new Mae();
 		
@@ -56,8 +54,6 @@ public class DogInserir extends JFrame {
 		System.out.print("Criador : ");
 		resposta = entrada.next();	
 		dl.setCriador(resposta);
-		
-		
 			
 		System.out.println("+-----------------------------------+");
 		System.out.println("|  CACHORRO ADICIONADO COM SUCESSO  |");
@@ -95,23 +91,27 @@ public class DogInserir extends JFrame {
 		System.out.println("|    MAE ADICIONADO COM SUCESSO     |");
 		System.out.println("+-----------------------------------+");
 		
-		
-		
-	
-			
-			if(true) {
-				DadosCaoDAO d = new DadosCaoDAO();
-				d.inserir(dl);
-				PaiDAO Pdao = new PaiDAO();
-				Pdao.inserir(p);
-				MaeDAO Mdao = new MaeDAO();
-				Mdao.inserir(m);	
-				
-			}
-			
-			
-		}
+		try {
+            JSONObject cadastroCachorro = new JSONObject();
+            cadastroCachorro.put("nome", dl.getNomeCao());
+            cadastroCachorro.put("raca", dl.getRaca());
+            cadastroCachorro.put("registroStudBook", dl.getRegistroStudBook());
+            cadastroCachorro.put("cor", dl.getCor());
+            cadastroCachorro.put("origemRaca", dl.getOrigemRaca());
+            cadastroCachorro.put("criador", dl.getCriador());
+            cadastroCachorro.put("sexo", dl.getSexo());
+            cadastroCachorro.put("Nome da Mae",m.getNomemae());
+            cadastroCachorro.put("ResgistroStudBook Mae ", m.getRegistrostudbook());
+            cadastroCachorro.put("Nome do Pai",p.getNomePai());
+            cadastroCachorro.put("ResgistroStudBook Pai", p.getRegistrostudbook());
+
+            String cadastroJSON = cadastroCachorro.toString(4);
+            Files.write(Paths.get("cadastros.json"), cadastroJSON.getBytes());
+            
+            System.out.println(cadastroJSON);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
 	}
-	
-
-
+}

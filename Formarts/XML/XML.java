@@ -4,6 +4,9 @@ import Main.Interface;
 
 public class XML implements Interface {
 	public void enviar() {
-		System.out.println("xml");	
+		EscolhaXML ex = new EscolhaXML();
+		ex.Escolha();
 	}
 }
+
+
