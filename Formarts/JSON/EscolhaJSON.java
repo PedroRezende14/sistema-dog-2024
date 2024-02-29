@@ -4,7 +4,8 @@ import VIEW.PaineisVIEW;
 import java.util.Scanner;
 
 public class EscolhaJSON {
-	
+	ExcluirJSON ex = new ExcluirJSON();
+	ListaTodosJSON lt = new ListaTodosJSON();
 	DogInserirJSON di = new DogInserirJSON();
 	PaineisVIEW pv = new PaineisVIEW();
 	Scanner entrada = new Scanner(System.in);
@@ -21,6 +22,14 @@ public class EscolhaJSON {
 				case 1:
 					di.funcaoInserir();
 				break;
+				case 2:
+					lt.ListaTodos();
+				break;
+				case 3:
+					//lt.ListaFormatada();
+					ex.Excluir();
+					break;
+				
 			}
 		}
 	}

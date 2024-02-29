@@ -31,8 +31,6 @@ public class PaineisVIEW {
 		System.out.println("3 - Procurar Cadastro por ID        |");
 		System.out.println("4 - Alterar Informaçoes do Cachorro |");
 		System.out.println("5 - Ver todos os Cadastros          |");
-		System.out.println("6 - Remover Usuario 			    |");
-		System.out.println("7 - Ver todos os Usuarios           |");
 		System.out.println("8 - Sair                            |");
 		System.out.println("------------------------------------+");
 	}
@@ -56,7 +54,9 @@ public class PaineisVIEW {
 		System.out.println("            Painel JSON             |");
 		System.out.println("------------------------------------|");
 		System.out.println("1 - Cadastrar Novo Cachorro         |");
-		System.out.println("2 -                                 |");
+		System.out.println("2 - Lista todos Cadastro (JSON)     |");
+		System.out.println("3 - Excluir Cadastros               |");
+		System.out.println("2 - Sair                            |");
 		System.out.println("------------------------------------+");
 	}
 	
@@ -67,8 +67,15 @@ public class PaineisVIEW {
 		System.out.println("1 - Cadastrar Novo Cachorro         |");
 		System.out.println("2 - Lista Todos Cadastros           |");
 		System.out.println("3 - Excluir Cadastros               |");
+		System.out.println("4 - Sair                            |");
 		System.out.println("------------------------------------+");
+	}
+	
+	public void InvalidaOpc() {
 		
+		System.out.println("------------------------------------+");
+		System.out.println("          Opcao Invalida            |");
+		System.out.println("------------------------------------|");
 		
 	}
 	

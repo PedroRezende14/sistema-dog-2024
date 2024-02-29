@@ -11,6 +11,7 @@ import DTO.DadosCao;
 import DTO.Mae;
 import DTO.Pai;
 import VIEW.PaineisVIEW;
+import java.nio.charset.StandardCharsets;
 
 public class DogInserirJSON {
 	public void funcaoInserir() {
@@ -92,26 +93,41 @@ public class DogInserirJSON {
 		System.out.println("+-----------------------------------+");
 		
 		try {
-            JSONObject cadastroCachorro = new JSONObject();
-            cadastroCachorro.put("nome", dl.getNomeCao());
-            cadastroCachorro.put("raca", dl.getRaca());
-            cadastroCachorro.put("registroStudBook", dl.getRegistroStudBook());
-            cadastroCachorro.put("cor", dl.getCor());
-            cadastroCachorro.put("origemRaca", dl.getOrigemRaca());
-            cadastroCachorro.put("criador", dl.getCriador());
-            cadastroCachorro.put("sexo", dl.getSexo());
-            cadastroCachorro.put("Nome da Mae",m.getNomemae());
-            cadastroCachorro.put("ResgistroStudBook Mae ", m.getRegistrostudbook());
-            cadastroCachorro.put("Nome do Pai",p.getNomePai());
-            cadastroCachorro.put("ResgistroStudBook Pai", p.getRegistrostudbook());
+		    JSONObject cadastrosJSON;
+		    String filePath = "cadastros.json";
 
-            String cadastroJSON = cadastroCachorro.toString(4);
-            Files.write(Paths.get("cadastros.json"), cadastroJSON.getBytes());
-            
-            System.out.println(cadastroJSON);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+		
+		    if (Files.exists(Paths.get(filePath))) {
+		        String content = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8);
+		        cadastrosJSON = new JSONObject(content);
+		    } else {
+		        cadastrosJSON = new JSONObject();
+		    }
 
-	}
+		    // Cria um novo objeto JSON para o cadastro atual
+		    JSONObject cadastroCachorro = new JSONObject();
+		    cadastroCachorro.put("nome", dl.getNomeCao());
+		    cadastroCachorro.put("raca", dl.getRaca());
+		    cadastroCachorro.put("registroStudBook", dl.getRegistroStudBook());
+		    cadastroCachorro.put("cor", dl.getCor());
+		    cadastroCachorro.put("origemRaca", dl.getOrigemRaca());
+		    cadastroCachorro.put("criador", dl.getCriador());
+		    cadastroCachorro.put("sexo", dl.getSexo());
+		    cadastroCachorro.put("Nome da Mae",m.getNomemae());
+		    cadastroCachorro.put("ResgistroStudBook Mae ", m.getRegistrostudbook());
+		    cadastroCachorro.put("Nome do Pai",p.getNomePai());
+		    cadastroCachorro.put("ResgistroStudBook Pai", p.getRegistrostudbook());
+		    cadastrosJSON.append("cadastros", cadastroCachorro);
+
+		    String cadastroJSON = cadastrosJSON.toString(4);
+		    Files.write(Paths.get(filePath), cadastroJSON.getBytes());
+		    
+
+		    System.out.println(cadastroJSON);
+		} catch (Exception e) {
+		    e.printStackTrace();
+		}
+	}		
+
+	
 }

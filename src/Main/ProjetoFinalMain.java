@@ -19,17 +19,17 @@ public class ProjetoFinalMain {
 	
 public static void main(String[] args) {
 	
-		Interface i = new SQL();
+		Interface i = new SQL(); 
 		Salvar s = new Salvar(i);
 		//s.update();
 		
 		i = new JSON();
 		s = new Salvar(i);
-		s.update();
+		//s.update();
 		
 		i = new XML();
 		s = new Salvar(i);
-	//	s.update();
+		//s.update();
 		
 		
 	

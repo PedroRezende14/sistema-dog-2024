@@ -1,13 +1,18 @@
-{
-    "ResgistroStudBook Mae ": "p",
-    "Nome do Pai": "p",
-    "registroStudBook": "p",
-    "criador": "p",
-    "Nome da Mae": "p",
-    "cor": "p",
-    "raca": "p",
-    "origemRaca": "p",
-    "nome": "p",
-    "ResgistroStudBook Pai": "p",
-    "sexo": "p"
-}
+{"cadastros": [
+    {},
+    {},
+    {
+        "ResgistroStudBook Mae ": "a",
+        "Nome do Pai": "a",
+        "registroStudBook": "a",
+        "criador": "a",
+        "Nome da Mae": "a",
+        "cor": "a",
+        "raca": "a",
+        "origemRaca": "a",
+        "nome": "a",
+        "ResgistroStudBook Pai": "a",
+        "sexo": "a"
+    },
+    {}
+]}

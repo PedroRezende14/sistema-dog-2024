@@ -65,19 +65,21 @@ public class OpcAdimSQL {
 					break;
 					
 				case 6:
-					UsuarioExcluir ue = new UsuarioExcluir();
-					ue.mataUsuario();
+					//UsuarioExcluir ue = new UsuarioExcluir();
+			  	//	ue.mataUsuario();
+					  pv.InvalidaOpc();
 					break;
 				case 7:
-					UsuarioLista ul = new UsuarioLista();
-					ul.UsuarioList();
+				//	UsuarioLista ul = new UsuarioLista();
+				//	ul.UsuarioList();
+					  pv.InvalidaOpc();
 					break;
 					
 				case 8:
 					System.out.println("Saiu do sistema");
 					break;
 				default:
-	                System.out.println("Escolha inválida.");
+	               pv.InvalidaOpc();
 			}	
 		}
 	}

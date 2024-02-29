@@ -17,7 +17,7 @@ public class EscolhaXML {
 
 		
 		int opc = 0 ;
-		while(opc!=8) {		
+		while(opc!=4) {		
 			pv.PainelXML();
 			opc = entrada.nextInt();
 			
@@ -32,6 +32,13 @@ public class EscolhaXML {
 				case 3:
 					ex.ExcluirDog();
 				break;
+				case 4:
+					opc=4;
+				break;
+				
+				default:
+					pv.InvalidaOpc();
+				
 			}
 		}
 	}
