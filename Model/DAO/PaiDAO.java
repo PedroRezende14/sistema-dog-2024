@@ -32,7 +32,6 @@ public class PaiDAO {
 		            return false;
 		        }
 		    }
-		
 
 		public boolean Excluir(Pai Pai){
 			 try {
@@ -50,9 +49,6 @@ public class PaiDAO {
 		        }
 		}
 		
-
-		
-		// não está funcionando
 		public boolean alterar(Pai Pai){
 			try {
 	            Connection conn = Conexao.conectar();
@@ -86,11 +82,11 @@ public class PaiDAO {
 		                System.out.println("          Dados Do Pai");
 		       
 		                
-		                String nomepai = rs.getString("nomepai");
+		                String nomepai = rs.getString("nomepai ");
 		                System.out.print("nome: "+ nomepai);
 		                
-		                String bock = rs.getString("registrostudbook");
-		                System.out.println(",RegistroBook:"+ bock);
+		                String bock = rs.getString("registrostudbook ");
+		                System.out.println(",RegistroBook: "+ bock);
 		                
 	            
 		                System.out.println("======================================");             

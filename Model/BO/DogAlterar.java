@@ -11,17 +11,16 @@ import DTO.Pai;
 
 public class DogAlterar {
 	
+	DadosCao dl = new DadosCao();
+	DadosCaoDAO d = new DadosCaoDAO();
+	Pai p = new Pai();
+	PaiDAO Pdao = new PaiDAO();
+	Mae m = new Mae();
+	MaeDAO Mdao = new MaeDAO();
+	
 	public void funcaoAlterar() {
-		Scanner entrada = new Scanner(System.in);
 		
-		DadosCao dl = new DadosCao();
-		DadosCaoDAO d = new DadosCaoDAO();
-
-		Pai p = new Pai();
-		PaiDAO Pdao = new PaiDAO();
-
-		Mae m = new Mae();
-		MaeDAO Mdao = new MaeDAO();
+		Scanner entrada = new Scanner(System.in);
 		
 		int opc = 0;
 		int x ;	
@@ -30,7 +29,6 @@ public class DogAlterar {
 		System.out.println("+-----------------------------------+");
 		System.out.println("|  ALTERAR INFORMAÇÕES DO CACHORRO  |");
 		System.out.println("+-----------------------------------+");
-		
 		
 		System.out.print("Nome: ");
 		resposta = entrada.next();
@@ -60,17 +58,13 @@ public class DogAlterar {
 		resposta = entrada.next();	
 		dl.setCriador(resposta);
 		
-		
 		System.out.print("Qual o numero MicroChip: ");
 		x = entrada.nextInt();
 		
 		dl.setnMicroChip(x);
 		p.setPk_pai(x);
 		m.setPk_mae(x);
-		
-		
-		
-		
+
 		System.out.println("+-----------------------------------+");
 		System.out.println("|  ALTERAR INFORMAÇÕES DO PAI       |");
 		System.out.println("+-----------------------------------+");
@@ -103,5 +97,4 @@ public class DogAlterar {
 		System.out.println("|  ALTERAÇÃO CONCLUIDA COM SUCESSO  |");
 		System.out.println("+-----------------------------------+");
 	}
-
 }

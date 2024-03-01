@@ -11,18 +11,16 @@ import DTO.Pai;
 
 public class DogProcurarId {
 
+	Scanner entrada = new Scanner(System.in);
+	DadosCao dl = new DadosCao();
+	DadosCaoDAO d = new DadosCaoDAO();
+	Pai p = new Pai();
+	PaiDAO Pdao = new PaiDAO();
+	Mae m = new Mae();
+	MaeDAO Mdao = new MaeDAO();
+	
 	public void FuncaoProcurar() {
-		Scanner entrada = new Scanner(System.in);
-		
-		DadosCao dl = new DadosCao();
-		DadosCaoDAO d = new DadosCaoDAO();
-		
-		Pai p = new Pai();
-		PaiDAO Pdao = new PaiDAO();
-		
-		Mae m = new Mae();
-		MaeDAO Mdao = new MaeDAO();
-		
+	
 		int x ;	
 
 		System.out.println("+-----------------------------------+");

@@ -11,15 +11,14 @@ import DTO.Pai;
 
 public class DogPesquisarTodos {
 	
+	DadosCao dl = new DadosCao();
+	DadosCaoDAO d = new DadosCaoDAO();
+	Pai p = new Pai();
+	PaiDAO Pdao = new PaiDAO();
+	Mae m = new Mae();
+	MaeDAO Mdao = new MaeDAO();
 	
 	public void PesquisarTodos(){
-		
-		DadosCao dl = new DadosCao();
-		DadosCaoDAO d = new DadosCaoDAO();
-		Pai p = new Pai();
-		PaiDAO Pdao = new PaiDAO();
-		Mae m = new Mae();
-		MaeDAO Mdao = new MaeDAO();
 		
 		List<DadosCao> caes = d.pesquisarTodos();
 		List<Pai> pais = Pdao.pesquisarTodos();
@@ -70,9 +69,7 @@ public class DogPesquisarTodos {
 			System.out.print(", ");
 			System.out.print("Registro book");
 			System.out.println(maes.get(x).getRegistrostudbook());
-			
 			System.out.println("+-----------------------------------+");
 		}
-
 	}
 }

@@ -15,8 +15,6 @@ import DAO.*;
 
 public class ProjetoFinalMain {
 
-	
-	
 public static void main(String[] args) {
 	
 		Interface i = new SQL(); 
@@ -29,9 +27,6 @@ public static void main(String[] args) {
 		
 		i = new XML();
 		s = new Salvar(i);
-		//s.update();
-		
-		
-	
+		s.update();	
 	}
 }

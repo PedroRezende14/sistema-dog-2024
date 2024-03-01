@@ -18,7 +18,6 @@ public class DadosCaoDAO {
 		
 		 try {
 	            Connection conn = Conexao.conectar();
-	            
 	            String sql = "INSERT INTO dadoscao (nomeCao, Raca, RegistroStudBook, Cor, OrigemRaca,  criador, sexo ) VALUES (?, ?, ?, ?, ?, ?, ?);";
 	            PreparedStatement ps = conn.prepareStatement(sql);
 	            ps.setString(1, DadosCao.getNomeCao());
@@ -39,7 +38,6 @@ public class DadosCaoDAO {
 	        }
 	    }
 	
-
 	public boolean Excluir(DadosCao DadosCao){
 		 try {
 	            Connection conn = Conexao.conectar();
@@ -55,10 +53,7 @@ public class DadosCaoDAO {
 	             return false;
 	        }
 	}
-	
 
-	
-	
 	public boolean alterar(DadosCao DadosCao){
 		try {
             Connection conn = Conexao.conectar();
@@ -81,9 +76,7 @@ public class DadosCaoDAO {
              return false;
         }
 	}
-	
-	
-	
+
 	public DadosCao procurarPorCodigo(DadosCao DadosCao){
 		  try {
 	            Connection conn = Conexao.conectar();
@@ -94,7 +87,6 @@ public class DadosCaoDAO {
 	            ResultSet rs = ps.executeQuery();
 	            if (rs.next()) {
 	                DadosCao obj = new DadosCao();
-	                
 	                
 	                System.out.println("======================================");
 	                System.out.println("          Dados Do Cachorro");
@@ -119,7 +111,6 @@ public class DadosCaoDAO {
 	                String sexo = rs.getString("sexo");
 	                System.out.println(",sexo: "+ cor);
 	                System.out.println("======================================");
-	                
 	                
 	                ps.close();
 	                rs.close();
@@ -170,6 +161,5 @@ public class DadosCaoDAO {
 	            e.printStackTrace();
 	            return null;
 	        }
-	    }
-		
+	    }	
 }

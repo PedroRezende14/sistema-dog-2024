@@ -82,7 +82,6 @@ public class LoginDAO {
         }
     }
 	 
-	 
 	 public Login Verifica (Login Login) {
 			
 		 try {
@@ -122,7 +121,4 @@ public class LoginDAO {
         }
 		
 	}
-	
-	
-
 }

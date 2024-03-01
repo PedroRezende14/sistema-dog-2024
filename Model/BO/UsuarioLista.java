@@ -9,7 +9,6 @@ import DAO.*;
 
 public class UsuarioLista {
 	
-	
 	public void UsuarioList() {
 			Login l = new Login();
 			LoginDAO ld = new LoginDAO();
@@ -18,8 +17,8 @@ public class UsuarioLista {
 			System.out.println("+-----------------------------------+");
 			System.out.println("|         DADOS DOS USUARIOS        |");
 			System.out.println("+-----------------------------------+");
+			
 			for (int x=0;x<users.size();x++) {
-				
 				System.out.print(", Nome: ");
 				System.out.print(users.get(x).getNome_usuario());
 			

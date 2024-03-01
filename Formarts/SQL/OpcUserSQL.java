@@ -11,12 +11,11 @@ import BO.UsuarioExcluir;
 import BO.UsuarioLista;
 import DAO.DadosCaoDAO;
 import DTO.DadosCao;
-import VIEW.LimparTela;
 import VIEW.PaineisVIEW;
 
 public class OpcUserSQL {
 	public void pla() {
-		LimparTela lt = new LimparTela();
+	
 		PaineisVIEW vp = new PaineisVIEW();
 		Scanner entrada = new Scanner(System.in);
 		DadosCao dl = new DadosCao();
@@ -35,7 +34,7 @@ public class OpcUserSQL {
 			
 			opc = entrada.nextInt();
 			
-			lt.limparTela();
+			vp.limparTela();
 			if (opc == 1) {
 				DogInserir di = new DogInserir();
 				di.funcaoInserir();
@@ -54,7 +53,7 @@ public class OpcUserSQL {
 
 			
 		}
-		lt.limparTela();
+		vp.limparTela();
 		System.out.println("Saiu do sistema");
 	}
 }

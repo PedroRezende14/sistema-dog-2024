@@ -17,12 +17,12 @@ import VIEW.*;
 
 public class DogInserir extends JFrame {
 	
+	Scanner entrada = new Scanner(System.in);
+	DadosCao dl = new DadosCao();
+	Pai p = new Pai();
+	Mae m = new Mae();
+	
 	public void funcaoInserir() {
-		
-		Scanner entrada = new Scanner(System.in);
-		DadosCao dl = new DadosCao();
-		Pai p = new Pai();
-		Mae m = new Mae();
 		
 		String resposta;
 		
@@ -56,9 +56,7 @@ public class DogInserir extends JFrame {
 		System.out.print("Criador : ");
 		resposta = entrada.next();	
 		dl.setCriador(resposta);
-		
-		
-			
+	
 		System.out.println("+-----------------------------------+");
 		System.out.println("|  CACHORRO ADICIONADO COM SUCESSO  |");
 		System.out.println("+-----------------------------------+");
@@ -94,10 +92,6 @@ public class DogInserir extends JFrame {
 		System.out.println("+-----------------------------------+");
 		System.out.println("|    MAE ADICIONADO COM SUCESSO     |");
 		System.out.println("+-----------------------------------+");
-		
-		
-		
-	
 			
 			if(true) {
 				DadosCaoDAO d = new DadosCaoDAO();
@@ -105,11 +99,8 @@ public class DogInserir extends JFrame {
 				PaiDAO Pdao = new PaiDAO();
 				Pdao.inserir(p);
 				MaeDAO Mdao = new MaeDAO();
-				Mdao.inserir(m);	
-				
-			}
-			
-			
+				Mdao.inserir(m);			
+			}	
 		}
 	}
 	

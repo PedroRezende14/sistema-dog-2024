@@ -4,24 +4,20 @@ import VIEW.PaineisVIEW;
 import java.util.Scanner;
 
 public class EscolhaXML {
-	
 	Scanner entrada = new Scanner(System.in);
-	
 	AnimalFormulario af = new AnimalFormulario();
 	ListaTodosXML lt = new ListaTodosXML();
 	ExcluirXML ex = new ExcluirXML();
 	PaineisVIEW pv = new PaineisVIEW();
 	
-	
 	public void Escolha() {
-
 		
 		int opc = 0 ;
 		while(opc!=4) {		
 			pv.PainelXML();
 			opc = entrada.nextInt();
-			
 			switch(opc) {
+			
 				case 1:
 					af.CadastroXML();
 				break;
@@ -33,12 +29,10 @@ public class EscolhaXML {
 					ex.ExcluirDog();
 				break;
 				case 4:
-					opc=4;
-				break;
-				
+					System.out.println("Saiu do sistema");
+					break;
 				default:
 					pv.InvalidaOpc();
-				
 			}
 		}
 	}

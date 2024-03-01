@@ -20,7 +20,6 @@ public class ExcluirJSON {
 	public static void excluirCadastro(String nome) {
             try {
                 String filePath = "cadastros.json";
-
                 if (Files.exists(Paths.get(filePath))) {
                     String content = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8);
                     JSONObject cadastrosJSON = new JSONObject(content);
@@ -30,7 +29,6 @@ public class ExcluirJSON {
                
                         boolean removed = false;
 
-                 
                         for (int i = 0; i < cadastrosArray.length(); i++) {
                             JSONObject cadastro = cadastrosArray.getJSONObject(i);
                             if (cadastro.has("nome") && cadastro.getString("nome").equals(nome)) {
@@ -41,20 +39,21 @@ public class ExcluirJSON {
                         }
                         if (!removed) {
                             System.out.println("Nenhum cadastro encontrado com o nome '" + nome + "'.");
-                        } else {
+                        } 
+                        else {
                             Files.write(Paths.get(filePath), cadastrosJSON.toString(4).getBytes(), StandardOpenOption.TRUNCATE_EXISTING);
                             System.out.println("Cadastro de '" + nome + "' excluido com sucesso.");
                         }
-                    } else {
+                    } 
+                    else {
                         System.out.println("Nenhum cadastro encontrado.");
                     }
-                } else {
+                } 
+                else {
                     System.out.println("Arquivo de cadastros nao encontrado.");
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
     }
-
-
 }

@@ -10,8 +10,8 @@ import DTO.Pai;
 
 public class PaineisVIEW {
 	
-	
 	public void Login() {
+		
 		System.out.println("------------------------------------+");
 		System.out.println("              Bem Vindo             |");
 		System.out.println("------------------------------------|");
@@ -23,6 +23,7 @@ public class PaineisVIEW {
 	}
 	
 	public void PainelAdim() {
+		
 		System.out.println("------------------------------------+");
 		System.out.println("            Painel Adm              |");
 		System.out.println("------------------------------------|");
@@ -36,6 +37,7 @@ public class PaineisVIEW {
 	}
 	
 	public void PainelUser() {
+		
 		System.out.println("------------------------------------+");
 		System.out.println("            Painel Usuario          |");
 		System.out.println("------------------------------------|");
@@ -50,17 +52,19 @@ public class PaineisVIEW {
 	}
 	
 	public void PainelJSON() {
+		
 		System.out.println("------------------------------------+");
 		System.out.println("            Painel JSON             |");
 		System.out.println("------------------------------------|");
 		System.out.println("1 - Cadastrar Novo Cachorro         |");
 		System.out.println("2 - Lista todos Cadastro (JSON)     |");
 		System.out.println("3 - Excluir Cadastros               |");
-		System.out.println("2 - Sair                            |");
+		System.out.println("4 - Sair                            |");
 		System.out.println("------------------------------------+");
 	}
 	
 	public void PainelXML() {
+		
 		System.out.println("------------------------------------+");
 		System.out.println("            Painel XML              |");
 		System.out.println("------------------------------------|");
@@ -76,8 +80,12 @@ public class PaineisVIEW {
 		System.out.println("------------------------------------+");
 		System.out.println("          Opcao Invalida            |");
 		System.out.println("------------------------------------|");
-		
 	}
 	
-
+	public void limparTela() {
+		
+		for (int x=0; x<50 ;x++) {
+			System.out.println("");
+		}	
+	}
 }

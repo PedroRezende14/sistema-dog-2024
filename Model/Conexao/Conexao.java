@@ -9,7 +9,6 @@ public class Conexao {
 	
     public static Connection conectar() {
     	try {
-    	
     		Class.forName("com.mysql.jdbc.Driver");
             String url = "jdbc:mysql://localhost:3306/ProjetoFinal" ;
             return DriverManager.getConnection(url,"root","");

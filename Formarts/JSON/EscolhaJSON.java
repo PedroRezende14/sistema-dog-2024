@@ -14,7 +14,7 @@ public class EscolhaJSON {
 		
 		int opc = 0 ;
 		
-		while(opc!=8) {		
+		while(opc!=4) {		
 			pv.PainelJSON();
 			opc = entrada.nextInt();
 			
@@ -26,10 +26,13 @@ public class EscolhaJSON {
 					lt.ListaTodos();
 				break;
 				case 3:
-					//lt.ListaFormatada();
 					ex.Excluir();
 					break;
-				
+				case 4:
+					System.out.println("Saiu do sistema");
+					break;
+				default:
+					pv.InvalidaOpc();
 			}
 		}
 	}

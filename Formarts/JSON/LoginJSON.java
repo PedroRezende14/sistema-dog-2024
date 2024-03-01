@@ -16,8 +16,6 @@ public class LoginJSON {
 	EscolhaJSON ej=new EscolhaJSON();
 	
 	public void login() {
-		
 		ej.Escolha();
-		
 	}
 }

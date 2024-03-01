@@ -7,14 +7,15 @@ import DAO.*;
 
 public class UsuarioAdd {
 	
+	Login l = new Login();
+	LoginDAO ld = new LoginDAO();
+	Scanner entrada = new Scanner(System.in);
+	 
+	String resposta;
+	int n;
+	
 	public void InserirUsuario() {
-		Login l = new Login();
-		LoginDAO ld = new LoginDAO();
-		Scanner entrada = new Scanner(System.in);
-		
-		String resposta;
-		int n;
-		
+
 		System.out.println("+-----------------------------------+");
 		System.out.println("|         DADOS DO USUARIO          |");
 		System.out.println("------------------------------------+");

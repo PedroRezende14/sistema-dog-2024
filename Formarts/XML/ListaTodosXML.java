@@ -10,26 +10,21 @@ public class ListaTodosXML {
 	
 	public void ListaTodos() {
 		try {
-            // Carregar o arquivo XML
+       
             File xmlFile = new File("animal.xml");
 
-            // Criar um construtor de documentos
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
 
-            // Parsear o arquivo XML
             Document document = builder.parse(xmlFile);
 
-            // Obter a lista de elementos <animal>
             NodeList animalNodes = document.getElementsByTagName("animal");
 
-            // Iterar sobre os elementos <animal>
             for (int i = 0; i < animalNodes.getLength(); i++) {
                 Node animalNode = animalNodes.item(i);
                 if (animalNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element animalElement = (Element) animalNode;
                     
-                    // Obter os elementos filhos de <animal>
                     String nomecao = animalElement.getElementsByTagName("nomecao").item(0).getTextContent();
                     String raca = animalElement.getElementsByTagName("raca").item(0).getTextContent();
                     String registroStudBook = animalElement.getElementsByTagName("registroStudBook").item(0).getTextContent();
@@ -38,7 +33,6 @@ public class ListaTodosXML {
                     String criador = animalElement.getElementsByTagName("criador").item(0).getTextContent();
                     String sexo = animalElement.getElementsByTagName("sexo").item(0).getTextContent();
 
-                    // Exibir os dados do animal
                     System.out.println("Nomeção: " + nomecao);
                     System.out.println("Raça: " + raca);
                     System.out.println("Registro StudBook: " + registroStudBook);

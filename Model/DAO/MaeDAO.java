@@ -51,9 +51,6 @@ public class MaeDAO {
 	        }
 	}
 	
-
-	
-	// não está funcionando
 	public boolean alterar(Mae Mae){
 		try {
             Connection conn = Conexao.conectar();
@@ -81,20 +78,16 @@ public class MaeDAO {
 	            ResultSet rs = ps.executeQuery();
 	            if (rs.next()) {
 	            	Mae obj = new Mae();
-	                
-	                
+          
 	                System.out.println("======================================");
-	                System.out.println("          Dados Do mae");
-	                //int pk_pai = rs.getInt("pk_pai");
-	                //System.out.print("nmicrochip: "+ pk_pai);
-	                
+	                System.out.println("          Dados Do mae ");
+         
 	                String nomemae = rs.getString("nomemae");
 	                System.out.print("nome: "+ nomemae);
 	                
-	                String bock = rs.getString("registrostudbook");
-	                System.out.println(",RegistroBook:"+ bock);
-	                
-            
+	                String bock = rs.getString("registrostudbook ");
+	                System.out.println(",RegistroBook: "+ bock);
+
 	                System.out.println("======================================");             
 	                ps.close();
 	                rs.close();

@@ -11,18 +11,16 @@ import DTO.Pai;
 
 public class DogExcluir {
 	
+	DadosCao dl = new DadosCao();
+	DadosCaoDAO d = new DadosCaoDAO();
+	Pai p = new Pai();
+	PaiDAO Pdao = new PaiDAO();
+	Mae m = new Mae();
+	MaeDAO Mdao = new MaeDAO();
+	
 	public void funcaoExcluir() {
 		
 		Scanner entrada = new Scanner(System.in);
-		
-		DadosCao dl = new DadosCao();
-		DadosCaoDAO d = new DadosCaoDAO();
-		
-		Pai p = new Pai();
-		PaiDAO Pdao = new PaiDAO();
-		
-		Mae m = new Mae();
-		MaeDAO Mdao = new MaeDAO();
 		
 		int opc = 0;
 		int x ;	
@@ -45,7 +43,5 @@ public class DogExcluir {
 		System.out.println("+-----------------------------------+");
 		System.out.println("|  CADASTRO REMOVIDO COM SUCESSO    |");
 		System.out.println("+-----------------------------------+");
-		
 	}
-
 }

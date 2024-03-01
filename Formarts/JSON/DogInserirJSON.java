@@ -95,8 +95,7 @@ public class DogInserirJSON {
 		try {
 		    JSONObject cadastrosJSON;
 		    String filePath = "cadastros.json";
-
-		
+		    
 		    if (Files.exists(Paths.get(filePath))) {
 		        String content = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8);
 		        cadastrosJSON = new JSONObject(content);
@@ -104,7 +103,6 @@ public class DogInserirJSON {
 		        cadastrosJSON = new JSONObject();
 		    }
 
-		    // Cria um novo objeto JSON para o cadastro atual
 		    JSONObject cadastroCachorro = new JSONObject();
 		    cadastroCachorro.put("nome", dl.getNomeCao());
 		    cadastroCachorro.put("raca", dl.getRaca());
@@ -122,12 +120,9 @@ public class DogInserirJSON {
 		    String cadastroJSON = cadastrosJSON.toString(4);
 		    Files.write(Paths.get(filePath), cadastroJSON.getBytes());
 		    
-
-		    System.out.println(cadastroJSON);
+		   // System.out.println(cadastroJSON);
 		} catch (Exception e) {
 		    e.printStackTrace();
 		}
 	}		
-
-	
 }

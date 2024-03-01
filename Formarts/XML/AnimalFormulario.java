@@ -38,7 +38,6 @@ public class AnimalFormulario extends JFrame {
             }
         });
     }
-
     public AnimalFormulario() {
         setTitle("Formulário de Animal");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -162,8 +161,6 @@ public class AnimalFormulario extends JFrame {
         element.appendChild(doc.createTextNode(textContent));
         parent.appendChild(element);
     }
-    
- 
 
     private void limparCampos() {
         textFieldNomecao.setText("");
